@@ -44,7 +44,7 @@ router.post("/signup", async function (request, response) {
 
 router.post("/login", async function (request, response) {
     const { username, password } = request.body;
-
+console.log(request.body);
     const userFromDB = await getUserByName(username);
     console.log(userFromDB);
     if (!userFromDB) {
@@ -61,4 +61,4 @@ router.post("/login", async function (request, response) {
     }
 });
 
-export default router
+export default router;

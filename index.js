@@ -12,8 +12,8 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Connection
-//const MONGO_URL = "mongodb://127.0.0.1";
- const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = "mongodb+srv://Sankar:AjithSankar@cluster0.uda5ags.mongodb.net";
+//  const MONGO_URL = process.env.MONGO_URL;
 
 const client = new MongoClient(MONGO_URL);
 await client.connect(); // top level await 

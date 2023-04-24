@@ -12,15 +12,14 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Connection
-const MONGO_URL = "mongodb+srv://Sankar:AjithSankar@cluster0.uda5ags.mongodb.net";
-//  const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = process.env.MONGO_URL;
 
 const client = new MongoClient(MONGO_URL);
 await client.connect(); // top level await 
 console.log("Mongo is connected !!!");
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 
 app.get("/", function (request, response) {
